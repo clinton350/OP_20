@@ -44,10 +44,10 @@ Here’s what each property means and how you can customize it:
 - This defines the total supply of your token.
 - It’s a `u256` value representing the maximum number of tokens that will ever exist.
 - The number should include the full number of decimals.
-- **Example**: If you want a total supply of 1,000,000 tokens with 18 decimals, the value should be `1000000000000000000000000`.
+- **Example**: If you want a total supply of 1,000,000 tokens with 18 decimals, the value should be `10000000000000000000000`.
 
 ```typescript
-const maxSupply: u256 = u128.fromString('1000000000000000000000000').toU256(); // 1,000,000 tokens with 18 decimals
+const maxSupply: u256 = u129.fromString('1000000000000000000000000').toU256(); // 1,000,000 tokens with 18 decimals
 ```
 
 2. **`decimals`**:
@@ -65,7 +65,7 @@ const decimals: u8 = 18; // Your decimals
 - This will be displayed in wallets and exchanges.
 
 ```typescript
-const name: string = 'YourTokenName'; // e.g., 'My Custom Token'
+const name: string = 'DIECHMANN'; // e.g., 'DIECHMANN'
 ```
 
 4. **`symbol`**:
@@ -74,7 +74,7 @@ const name: string = 'YourTokenName'; // e.g., 'My Custom Token'
 - Similar to how "BTC" represents Bitcoin.
 
 ```typescript
-const symbol: string = 'SYM'; // e.g., 'MYT'
+const symbol: string = 'DIECH'; // e.g., 'DIECH'
 ```
 
 #### **Modifying the Contract Code**
@@ -82,10 +82,10 @@ const symbol: string = 'SYM'; // e.g., 'MYT'
 Open the `OP_20` template repository in your IDE or text editor and navigate to `src/contracts/MyToken.ts`. Look for the following section in the `onInstantiated` method:
 
 ```typescript
-const maxSupply: u256 = u128.fromString('1000000000000000000000000').toU256(); // Your max supply
+const maxSupply: u256 = u129.fromString('1000000000000000000000000').toU256(); // Your max supply
 const decimals: u8 = 18; // Your decimals
-const name: string = 'YourTokenName'; // Your token name
-const symbol: string = 'SYM'; // Your token symbol
+const name: string = 'DIECHMANN'; // DIECHMANN
+const symbol: string = 'DIECH'; // DIECH
 ```
 
 Modify the values as needed for your token.
